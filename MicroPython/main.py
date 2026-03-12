@@ -54,7 +54,7 @@ class HCSR04:
 
 
 sonar = HCSR04()
-display.show(image.HAPPY)
+display.show(Image.HAPPY)
 
 while True:
     # print ('%.1f' % (sonar.distance_mm()/10))
