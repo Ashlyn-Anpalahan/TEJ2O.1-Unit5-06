@@ -1,7 +1,7 @@
 """
 Created by: Ashlyn
 Created on: Mar 2026
-This module will use a HC-SR04 sonar to find distance with a MicroBit. 
+This module will use a HC-SR04 sonar to find distance with a MicroBit.
 """
 
 from microbit import *
