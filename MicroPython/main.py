@@ -12,7 +12,7 @@ class HCSR04:
     #   returns distance in mm
     # Trig: pin 1
     # Echo: pin 2
-    def __init__(self, tpin=pin1, epin=pin2, spin=pin13):
+    def __init__(self, tpin=pin8, epin=pin12, spin=pin13):
         self.trigger_pin = tpin
         self.echo_pin = epin
         self.sclk_pin = spin
@@ -57,6 +57,7 @@ sonar = HCSR04()
 display.show(Image.HAPPY)
 
 while True:
-    # print ('%.1f' % (sonar.distance_mm()/10))
-    display.show(sonar.distance_mm() / 10)
+    if button_a.was_pressed():
+        # print ('%.1f' % (sonar.distance_mm()/10))
+        display.scroll(sonar.distance_mm() / 10)
     sleep(500)
